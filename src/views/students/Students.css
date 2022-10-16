@@ -1,0 +1,34 @@
+.l-form-control {
+    margin-bottom: 15px;
+}
+
+.l-form-control label{
+    display: block;
+    margin-bottom: 7px;
+}
+
+.l-form-control input, .l-form-control textarea{
+    width: 200px;
+    padding: 7px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.reg-form-box {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.li-a-dd{
+    font-size: 13px;
+}
+
+/*
+.reg-form-box button{
+    padding: 10px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    border-radius: 5px;
+}*/
