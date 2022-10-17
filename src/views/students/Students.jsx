@@ -17,12 +17,12 @@ class Student extends React.Component{
         this.state = {
             def_stu_obj : {
                 registerNo : 0,
-                firstName: "Saravanan",
-                lastName: "S",
-                emailAddress: "saravanans@boodskap.io",
+                firstName: "John",
+                lastName: "Doe",
+                emailAddress: "john@dummy.email",
                 password: "",
-                phoneNumber: "+91 72003 35241",
-                homeAddress : "5/210A Sri Venkatachalapathy Nagar, Krishnapuram",
+                phoneNumber: "+19876543210",
+                homeAddress : "Cross Street, TX",
                 lastQualifiedEdu : "B.E CSE",
                 currQualifiedEdu : "MBA",
                 createdTime : 0,
