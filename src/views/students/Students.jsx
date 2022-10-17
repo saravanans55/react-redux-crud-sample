@@ -20,7 +20,7 @@ class Student extends React.Component{
                 firstName: "Saravanan",
                 lastName: "S",
                 emailAddress: "saravanans@boodskap.io",
-                password: "welcome123",
+                password: "",
                 phoneNumber: "+91 72003 35241",
                 homeAddress : "5/210A Sri Venkatachalapathy Nagar, Krishnapuram",
                 lastQualifiedEdu : "B.E CSE",
@@ -111,15 +111,23 @@ class Student extends React.Component{
 
     async componentDidMount() {
         console.log("componentDidMount - After rendering html");
+        const make = 'Ford';
+        const model = 'Mustang';
+        const car = { make, model };
+        console.log(car);
         await this.getStudentsList();
     }
 
     render(){
+
+        let langs =  ["Ruby","ES6","Scala"];
+
         return (
             <>
                 <Container>
                     <h3>Students</h3>
                     <hr/>
+                    {langs.map(it => <p>{it}</p>)}
                     <Row>
                         <Col lg={4}>
                             {/*<form className="reg-form-box">
