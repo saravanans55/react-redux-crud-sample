@@ -1,12 +1,12 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Students from "./views/students/Students";
+import Expenses from "./views/expenses/Expenses";
 
 function App() {
   return (
     <div className="App">
-        <Students student_id={""}/>
+        <Expenses expense_id={""}/>
     </div>
   );
 }
