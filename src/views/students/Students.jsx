@@ -17,12 +17,12 @@ class Student extends React.Component{
         this.state = {
             def_stu_obj : {
                 registerNo : 0,
-                firstName: "john",
-                lastName: "doe",
-                emailAddress: "johndoe@dummy.email",
+                firstName: "John",
+                lastName: "Doe",
+                emailAddress: "john@dummy.email",
                 password: "",
-                phoneNumber: "+1 987 654 3210",
-                homeAddress : "North Cross Road, USA",
+                phoneNumber: "+19876543210",
+                homeAddress : "Cross Street, TX",
                 lastQualifiedEdu : "B.E CSE",
                 currQualifiedEdu : "MBA",
                 createdTime : 0,
@@ -111,15 +111,23 @@ class Student extends React.Component{
 
     async componentDidMount() {
         console.log("componentDidMount - After rendering html");
+        const make = 'Ford';
+        const model = 'Mustang';
+        const car = { make, model };
+        console.log(car);
         await this.getStudentsList();
     }
 
     render(){
+
+        let langs =  ["Ruby","ES6","Scala"];
+
         return (
             <>
                 <Container>
                     <h3>Students</h3>
                     <hr/>
+                    {langs.map(it => <p>{it}</p>)}
                     <Row>
                         <Col lg={4}>
                             {/*<form className="reg-form-box">
