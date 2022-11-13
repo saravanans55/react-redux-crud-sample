@@ -1,0 +1,16 @@
+.reg-form-box label{
+    display: block;
+    margin-bottom: 7px;
+    color: #666666;
+}
+
+.reg-form-box input{
+    font-size: 13px;
+}
+
+.reg-form-box {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    border-radius: 5px;
+}
