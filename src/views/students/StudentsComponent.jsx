@@ -1,16 +1,15 @@
-import React, {useState} from "react";
-import './Students.css';
+import React from "react";
+import './StudentsComponent.css';
 import {Button, Row, Col, Table, Form, DropdownButton, Dropdown, Container} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencil, faEye, faTrash } from '@fortawesome/free-solid-svg-icons'
 import uuid from 'react-uuid';
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 import axios from 'axios';
 
 const API_URL = "https://crudcrud.com/api";
 
-class Student extends React.Component{
-
+class StudentsComponent extends React.Component{
 
     constructor(props) {
         super(props);
@@ -65,19 +64,19 @@ class Student extends React.Component{
         axios.post(URL, self.state.def_stu_obj, headers)
             .then(function (response) {
                 console.log(response);
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Success',
-                    text: 'Student Registered Successfully'
-                });
+                // Swal.fire({
+                //     icon: 'success',
+                //     title: 'Success',
+                //     text: 'Student Registered Successfully'
+                // });
             })
             .catch(function (error) {
                 console.log(error);
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: error.message,
-                });
+                // Swal.fire({
+                //     icon: 'error',
+                //     title: 'Oops...',
+                //     text: error.message,
+                // });
             });
     }
 
@@ -101,11 +100,11 @@ class Student extends React.Component{
             })
             .catch(function (error) {
                 console.log(error);
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: error.message,
-                });
+                // Swal.fire({
+                //     icon: 'error',
+                //     title: 'Oops...',
+                //     text: error.message,
+                // });
             });
     }
 
@@ -251,4 +250,4 @@ class Student extends React.Component{
     };
 }
 
-export default Student;
+export default StudentsComponent;

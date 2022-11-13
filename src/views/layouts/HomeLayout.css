@@ -1,0 +1,11 @@
+.header-border{
+    border-bottom: 5px solid #ff1261;
+    background-color: #363636 !important;
+
+}
+.header-border .nav-link{
+    color: #ffffff !important;
+}
+.active{
+    background-color:red;
+}
