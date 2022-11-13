@@ -1,16 +1,15 @@
-import { Button, Card, Dropdown, DropdownButton, Form, Modal, Table } from 'react-bootstrap';
-import './BooksComponent.css';
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import uuid from 'react-uuid';
+import { Button, Card, Dropdown, DropdownButton, Form, Modal, Table } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faPencil, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faPencil, faPlus, faRefresh, faTrash } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
+import Swal from 'sweetalert2';
+import './BooksComponent.css';
 
 let API_URL = "http://localhost:10001/api/v1";
 
 export default function BooksComponent(props){
     
-    let self = this;
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -50,11 +49,11 @@ export default function BooksComponent(props){
         axios.post(URL, bookObj, headers)
             .then(function (response) {
                 console.log(response);
-                // Swal.fire({
-                //     icon: 'success',
-                //     title: 'Success',
-                //     text: 'Student Registered Successfully'
-                // });
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Student Registered Successfully'
+                });
             })
             .catch(function (error) {
                 console.log(error);
@@ -105,8 +104,8 @@ export default function BooksComponent(props){
                     </div>
                     <div className='col-lg-6 d-flex'>
                         <div className='ms-auto'>
-                            <Button className='btn btn-primary' onClick={handleShow}>Add New Book</Button>
-                            <Button className='btn btn-primary ml-2' onClick={handleShow}>Refresh</Button>
+                            <Button className='btn btn-primary' onClick={handleShow}><FontAwesomeIcon icon={faPlus} /> Add New Book</Button>
+                            <Button className='btn btn-primary ms-2' onClick={getBooksList}><FontAwesomeIcon icon={faRefresh} /> Refresh</Button>
                         </div>                    
                     </div>
                 </div>
