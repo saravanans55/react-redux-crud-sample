@@ -175,7 +175,6 @@ export default function BooksComponent(props){
                                 <Form.Label>Ratings</Form.Label>
                                 <Form.Control type="number" min={0} max={5} placeholder="Enter Ratings" required />
                             </Form.Group>
-
                             <Form.Group className="mb-3" controlId="authorName">
                                 <Form.Label>Author Name</Form.Label>
                                 <Form.Control type="text" placeholder="Enter Author Name" required />
